@@ -3,11 +3,10 @@ import { HEROES } from './heroes/mocks/Hero.mocks';
 import { Hero } from './Hero';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class HeroService {
-
-  getHeroes(): Hero[]{
-    return HEROES
+  getHeroes(): Hero[] {
+    return HEROES;
   }
 }
