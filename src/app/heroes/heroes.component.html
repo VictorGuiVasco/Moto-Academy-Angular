@@ -8,7 +8,7 @@
   <input class = "input" id="name" [(ngModel)]="hero.name" placeholder="name">
 </div> -->
 
-<h2>My Heroes</h2>
+<!-- <h2>My Heroes</h2>
 <ul class = "heroes">
   <li *ngFor = "let hero of heroes">
     <button type = "button" (click) = "onSelectHero(hero)">
@@ -18,4 +18,27 @@
   </li>
 </ul>
 
-<app-hero-detail [hero] = "selectedHero"></app-hero-detail>
+<app-hero-detail [hero] = "selectedHero"></app-hero-detail> -->
+
+<!-- <ul class="heroes">
+  <li *ngFor="let hero of heroes">
+    <button
+      type="button"
+      (click)="onSelectHero(hero)"
+      [class.selected]="hero === selectedHero"
+    >
+      <span class="badge">{{ hero.id }}</span>
+      <span class="name">{{ hero.name }}</span>
+    </button>
+  </li>
+</ul> -->
+
+<ul class="heroes">
+  <a *ngFor="let hero of heroes">
+    <a routerLink="/detail/{{ hero.id }}">
+      <span class="badge">
+        {{ hero.name }}
+      </span></a
+    >
+  </a>
+</ul>
